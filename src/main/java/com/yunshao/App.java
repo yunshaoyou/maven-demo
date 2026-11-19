@@ -14,6 +14,11 @@ public class App {
         // 1. 直接输出
         System.out.println("Hello Maven!");
 
+        // 1.1 调用合作者新增的 Greeting 类（本次提交由"合作者"完成）
+        Greeting greeting = new Greeting("maven-demo");
+        System.out.println(greeting.welcome());
+        System.out.println("当前版本: " + greeting.version());
+
         // 2. 使用 commons-lang3 依赖（由 pom.xml 声明、Maven 自动下载）
         String raw = "  maven demo  ";
         System.out.println("trim 前: [" + raw + "]");
